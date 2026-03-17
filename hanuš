@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svatyně The Goaters | Odkaz Mistra Hanuše</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Sniglet:wght@400;800&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --sky-blue: #a2d2ff;
+            --cheese-yellow: #ffe082;
+            --piggy-pink: #ffafcc;
+            --holy-white: #ffffff;
+            --text-color: #4a4e69;
+            --sect-purple: #bdb2ff;
+        }
+
+        body {
+            background-color: var(--sect-purple);
+            background-image: radial-gradient(circle, var(--sky-blue) 20%, var(--sect-purple) 100%);
+            font-family: 'Pangolin', cursive;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .shrine-container {
+            max-width: 800px;
+            background: var(--holy-white);
+            border: 10px double var(--piggy-pink);
+            border-radius: 50px;
+            padding: 50px;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 20px 0 rgba(0,0,0,0.05);
+            position: relative;
+            text-align: center;
+        }
+
+        /* Svatozář nad nadpisem */
+        .halo {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 60px;
+            background: rgba(255, 224, 130, 0.5);
+            filter: blur(20px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        h1 {
+            font-family: 'Bubblegum Sans', cursive;
+            color: #ff6b6b;
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 3px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .martyr-text {
+            background: #fff0f5;
+            border-radius: 30px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 10px solid var(--piggy-pink);
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .quiz-box {
+            background: var(--sky-blue);
+            padding: 30px;
+            border-radius: 40px;
+            color: white;
+            border: 5px solid white;
+        }
+
+        .question {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .options label {
+            display: block;
+            background: white;
+            color: var(--text-color);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .options label:hover { background: var(--cheese-yellow); transform: scale(1.03); }
+
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-family: 'Sniglet', sans-serif;
+            font-size: 1.8rem;
+            border-radius: 100px;
+            cursor: pointer;
+            box-shadow: 0 8px 0 #d45050;
+            margin-top: 20px;
+        }
+
+        button:active { transform: translateY(4px); box-shadow: 0 4px 0 #d45050; }
+
+        .hidden { display: none; }
+
+        /* Vizuální prvky sekty */
+        .symbol { font-size: 80px; margin: 20px; display: inline-block; }
+        .sparkle { animation: blink 1s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    </style>
+</head>
+<body>
+
+<div class="shrine-container">
+    <div class="halo"></div>
+    <div class="symbol">🐐✨👁️✨🐐</div>
+    <h1>MISTR HANUŠ</h1>
+    <p style="color: var(--piggy-pink); font-weight: bold; font-size: 1.5rem;">VĚČNÉ SVĚTLO V NAŠICH SRDCÍCH</p>
+
+    <div class="martyr-text">
+        "Mistr Hanuš daroval Praze čas, ale Praha mu vzala zrak. Zradili ho ti, které miloval! 
+        Jeho krev není rudá, ale sýrově zlatá a teče v žilách každého pravého Goatera. 
+        Příběh o koze není jen pohádka – je to evangelium o věrnosti, která překoná i temnotu vybodnutých očí! 
+        Jsi připraven se mu odevzdat?"
+    </div>
+
+    <div id="quiz" class="quiz-box">
+        <h2 style="font-family: 'Sniglet';">Pět stupňů osvícení</h2>
+        
+        <div class="question">
+            <p>1. Co udělal Kuba s hřebíkem v prvním díle?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="0"> Schoval ho pod polštář</label>
+                <label><input type="radio" name="q1" value="1"> Nechtěně jím přibil kozu za ucho k věži</label>
+                <label><input type="radio" name="q1" value="0"> Prodal ho na trhu za sýr</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Kdo je hlavním nepřítelem světla a věznitelem rodičů v Kozím příběhu se sýrem?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="1"> Zlí čerti z hlubin pekla</label>
+                <label><input type="radio" name="q2" value="0"> Lakomý starosta Prahy</label>
+                <label><input type="radio" name="q2" value="0"> Obří hladová myš</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Jaká byla Hanušova poslední slova předtím, než orloj zastavil?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="0"> "Mám hlad na sýr."</label>
+                <label><input type="radio" name="q3" value="1"> "Když já nevidím, nikdo neuvidí!" (duchovní význam)</label>
+                <label><input type="radio" name="q3" value="0"> "Koza je lepší než lidi."</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. Co symbolizuje Koza v našem učení?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="1"> Čistou, nepochopenou lásku a oběť</label>
+                <label><input type="radio" name="q4" value="0"> Pouze zdroj mléka</label>
+                <label><input type="radio" name="q4" value="0"> Tvrdohlavost a hloupost</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Jsi ochoten bránit čest Mistra Hanuše i proti celému světu?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="1"> Ano, celou svou duší a sýrem!</label>
+                <label><input type="radio" name="q5" value="0"> Možná, když bude hezky</label>
+                <label><input type="radio" name="q5" value="0"> Ne, bojím se čertů</label>
+            </div>
+        </div>
+
+        <button onclick="evaluateSect()">VSTOUPIT DO SVĚTLA</button>
+    </div>
+
+    <div id="registration" class="hidden">
+        <h2 style="font-family: 'Sniglet'; color: #ff6b6b; font-size: 3rem;">Vítej, Vyvolený!</h2>
+        <p>Prošel jsi očistou. Nyní se zapiš do <strong>Zlaté knihy The Goaters</strong>.</p>
+        <form style="background: var(--cheese-yellow); padding: 30px; border-radius: 30px;">
+            <input type="text" placeholder="Tvé svaté jméno" style="width: 80%; padding: 15px; border-radius: 10px; border: none; margin-bottom: 20px; font-size: 1.2rem;">
+            <p style="font-size: 0.9rem;">Přísahám, že budu šířit slávu Kozího příběhu a nikdy nezapomenu na Hanušovy oči.</p>
+            <button type="submit">ZPEČETIT OSUD</button>
+        </form>
+    </div>
+
+    <div id="heretic" class="hidden">
+        <h2 style="color: #ff6b6b;">KACÍŘI NEJSOU VÍTÁNI!</h2>
+        <p>Tvé srdce je temné jako oči bez zornic. Jdi se znovu podívat na oba díly a pros o odpuštění.</p>
+        <button onclick="location.reload()">Chci se napravit</button>
+    </div>
+</div>
+
+<script>
+    function evaluateSect() {
+        let score = 0;
+        const answers = document.querySelectorAll('input[type="radio"]:checked');
+        
+        answers.forEach(ans => {
+            score += parseInt(ans.value);
+        });
+
+        document.getElementById('quiz').classList.add('hidden');
+        if (score === 5) {
+            document.getElementById('registration').classList.remove('hidden');
+        } else {
+            document.getElementById('heretic').classList.remove('hidden');
+        }
+    }
+</script>
+
+</body>
+</html>
