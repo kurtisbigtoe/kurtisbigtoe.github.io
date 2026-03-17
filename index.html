@@ -2,10 +2,128 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Laura Mirošníková</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Mirošníková – The Goaters</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Uncial+Antiqua&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-red: #8b0000;
+            --ink: #2b1d0e;
+            --parchment: #f4e4bc;
+        }
+
+        body {
+            background-color: #1a0f0a; /* Temné pozadí za pergamenem */
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            font-family: 'EB Garamond', serif;
+        }
+
+        /* Hlavní kontejner jako svitek */
+        .scroll {
+            background: var(--parchment);
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            max-width: 700px;
+            padding: 60px;
+            position: relative;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8), inset 0 0 100px rgba(139, 69, 19, 0.3);
+            border: 2px solid #3d2b1f;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Ozdobné rohy */
+        .scroll::before, .scroll::after {
+            content: "❦";
+            position: absolute;
+            color: var(--dark-red);
+            font-size: 25px;
+        }
+        .scroll::before { top: 10px; left: 15px; }
+        .scroll::after { bottom: 10px; right: 15px; }
+
+        h1 {
+            font-family: 'Uncial Antiqua', serif;
+            color: var(--dark-red);
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 0px var(--gold);
+        }
+
+        .subtitle {
+            font-family: 'MedievalSharp', cursive;
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            margin: 30px auto;
+            font-size: 24px;
+            color: var(--gold);
+            border-top: 2px double var(--gold);
+            padding-top: 10px;
+            width: 80%;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: var(--ink);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* První písmeno - iluminace */
+        .dropcap {
+            float: left;
+            font-family: 'Uncial Antiqua', serif;
+            font-size: 4.5rem;
+            line-height: 0.85;
+            padding-right: 12px;
+            color: var(--dark-red);
+            font-weight: bold;
+        }
+
+        /* Kozí pečeť na konci */
+        .seal {
+            margin-top: 50px;
+            width: 100px;
+            height: 100px;
+            background: #a31d1d;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: bold;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+            border: 3px solid #801515;
+            transform: rotate(-10deg);
+        }
+    </style>
 </head>
 <body>
-    <h1>Laura Mirošníková</h1>
-    <p>Ahoj, jmenuji se Laura Mirošníková a jsem prezident mezinárodního fanklubu filmové série Kozí příběh, který se jmenuje The Goaters.</p>
+
+    <div class="scroll">
+        <h1>Laura Mirošníková</h1>
+        <div class="subtitle">Guvernérka řádu The Goaters</div>
+        
+        <div class="divider">🙣 ━━━━━━ 🐐 ━━━━━━ 🙥</div>
+        
+        <p>
+            <span class="dropcap">A</span>hoj, jmenuji se Laura Mirošníková a jsem prezident mezinárodního fanklubu filmové série Kozí příběh, který se hrdě nazývá <strong>The Goaters</strong>. Naším posláním je střežit odkaz tohoto legendárního díla pro budoucí generace.
+        </p>
+
+        <div class="seal">
+            THE<br>GOATERS
+        </div>
+    </div>
+
 </body>
 </html>
