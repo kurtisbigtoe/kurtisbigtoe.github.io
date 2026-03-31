@@ -19,8 +19,28 @@
             margin: 0;
             padding: 40px 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Aby navigační menu bylo nad svitkem */
+            align-items: center;
             font-family: 'EB Garamond', serif;
+        }
+
+        /* Styl pro navigační menu */
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: 'MedievalSharp', cursive;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+            text-decoration: underline;
         }
 
         /* Hlavní kontejner jako svitek */
@@ -79,6 +99,19 @@
             text-align: justify;
         }
 
+        /* Styl pro odkaz v textu */
+        p a {
+            color: var(--dark-red);
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 1px dashed var(--dark-red);
+        }
+
+        p a:hover {
+            color: #000;
+            background: rgba(212, 175, 55, 0.2);
+        }
+
         /* První písmeno - iluminace */
         .dropcap {
             float: left;
@@ -111,9 +144,10 @@
 <body>
 
     <nav>
-        <a href="#">Domů</a>
+        <a href="index.html">🏠 Domů</a>
         <a href="hanus.html">📜 Odkaz Mistra Hanuše</a>
-        <a href="https://github.com/">GitHub</a>
+        <a href="cpp.html">🏰 Moje oblíbené místo</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
     </nav>
     
     <div class="scroll">
@@ -123,7 +157,7 @@
         <div class="divider">🙣 ━━━━━━ 🐐 ━━━━━━ 🙥</div>
         
         <p>
-            <span class="dropcap">A</span>hoj, jmenuji se Laura Mirošníková a jsem prezident mezinárodního fanklubu filmové série Kozí příběh, který se hrdě nazývá <strong>The Goaters</strong>. Naším posláním je střežit odkaz tohoto legendárního díla pro budoucí generace.
+            <span class="dropcap">A</span>hoj, jmenuji se Laura Mirošníková a jsem prezident mezinárodního fanklubu filmové série Kozí příběh, který se hrdě nazývá <strong>The Goaters</strong>. Naším posláním je střežit odkaz tohoto legendárního díla pro budoucí generace. Kromě své práce pro řád také ráda trávím čas ve svém soukromém útočišti, které si můžete prohlédnout zde: <a href="cpp.html">Moje oblíbené místo</a>.
         </p>
 
         <div class="seal">
